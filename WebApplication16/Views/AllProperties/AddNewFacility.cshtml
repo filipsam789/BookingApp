@@ -1,0 +1,17 @@
+﻿@model WebApplication16.Models.AddNewFacilityViewModel
+@{
+    ViewBag.Title = "Add New Facility";
+}
+
+<h3>Add new facility for the property @Model.Property.Name</h3>
+
+@using (Html.BeginForm("InsertNewFacility", "AllProperties"))
+{
+    <div class="form-group">
+        @Html.EditorFor(m => m.Facility, new { @class = "form-control" })
+        @Html.HiddenFor(m => m.IdProperty)
+    </div>
+    <div>
+        <button type="submit" class="btn btn-default">Add facility</button>
+    </div>
+}

@@ -1,0 +1,88 @@
+﻿@model IEnumerable<WebApplication16.Models.Destination>
+
+@{
+    ViewBag.Title = "Choose your destination";
+}
+<style>
+    .img-container {
+        position: relative;
+        margin-top: -1.2%;
+    }
+
+    .c9e1121963 {
+        width: 100%;
+        max-height: 600px;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .form-container {
+        position: absolute;
+        top: 4%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        width: 95%;
+        max-width: 1150px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .partial {
+        position: absolute;
+        top: 20%;
+        left: -3.9%;
+        width: 100%;
+    }
+</style>
+<div class="img-container">
+    <img class="c9e1121963" alt="It's nighttime. The sky is clear and full of stars, and there are hills in the background. On the right, a modern-looking house stands alone.
+     Warm light coming through the house's glass walls illuminates some of the surrounding terrain, revealing sandy ground, boulders, and a few trees."
+         src="https://q-xx.bstatic.com/xdata/images/xphoto/2880x868/296661902.jpeg?k=81d5ab638f6a52308efde9aff4e7f4d468ee89a8db0677723edf0ff76410d6ec&amp;o="
+         data-testid="herobanner-image">
+    <div class="form-container">
+        <form action="/Listings/Search" method="post" class="row gy-2 gx-4 align-items-center">
+            <div class="row gy-2 gx-3 align-items-center">
+                <div class="col-3">
+                    <input id="livesearchtags" name="livesearchtags" placeholder="Destination" autocomplete="off" class="form-control" required />
+                </div>
+                <div class="col-2">
+                    <input type="text" name="check_in_date" class="form-control" placeholder="Check in Date" onfocus="(this.type='date')" required />
+                </div>
+
+                <div class="col-2">
+                    <input type="text" name="check_out_date" class="form-control" placeholder="Check out Date" onfocus="(this.type='date')" required />
+                </div>
+
+                <div class="col-2">
+                    <input type="number" name="number_of_guests" class="form-control" placeholder="Number of guests" required />
+                </div>
+
+                <div class="col-2">
+                    <input type="number" name="number_of_rooms" class="form-control" placeholder="Number of rooms" required />
+                </div>
+                <div class="col-1">
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row partial">
+        @Html.Partial("LiveTagSearch")
+    </div>
+</div>
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+@section Scripts{
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/searchForm.js"></script>
+}
+

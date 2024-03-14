@@ -1,0 +1,177 @@
+﻿@model WebApplication16.Models.ListingInfoViewModel
+
+@{
+    ViewBag.Title = "Listing Info";
+}
+
+<div class="container">
+    <hr />
+    <div class="row">
+        <div class="row">
+            <div class="col-auto">
+                <h3>@Model.ListingName</h3>
+                <p>@Model.Address</p>
+                
+            </div>
+            <div class="col-auto" style="margin-top: 0.6%; margin-left: -4.2%;">
+                <span style=" fill:gold;" class="d-flex">
+                    @for (var i = 0; i < Model.StarRating; i++)
+                    {
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M23.555 8.729a1.505 1.505 0 0 0-1.406-.98h-6.087a.5.5 0 0 1-.472-.334l-2.185-6.193a1.5 1.5 0 0 0-2.81 0l-.005.016-2.18 6.177a.5.5 0 0 1-.471.334H1.85A1.5 1.5 0 0 0 .887 10.4l5.184 4.3a.5.5 0 0 1 .155.543l-2.178 6.531a1.5 1.5 0 0 0 2.31 1.684l5.346-3.92a.5.5 0 0 1 .591 0l5.344 3.919a1.5 1.5 0 0 0 2.312-1.683l-2.178-6.535a.5.5 0 0 1 .155-.543l5.194-4.306a1.5 1.5 0 0 0 .433-1.661z">
+                            </path>
+                        </svg>
+                    }
+                </span>
+                
+            </div>
+            <span style="text-align:right; margin-top: -6%;">Average rating for this listing is <strong>@Model.AverageRating</strong></span>
+        </div>
+        <img src="@Model.MainImage" class="img-fluid main-image" data-bs-toggle="modal" style="max-width: 80%; max-height: 40%;" />
+        <div id="imageCarousel" class="carousel slide mt-3" data-bs-ride="carousel" style="max-height: 180px; margin-top: -2%;">
+            <div class="carousel-inner">
+                @{
+                    int itemsPerSlide = 5;
+                    for (int i = 0; i < Model.Images.Count; i += itemsPerSlide)
+                    {
+                        <div class="carousel-item @if (i == 0) { <text>active</text> }">
+                            <div class="d-flex">
+                                @for (int j = i; j < i + itemsPerSlide && j < Model.Images.Count; j++)
+                                {
+                                    <img src="@Model.Images[j]" class="d-block w-100 thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal" style="max-width: 20%; max-height: 180px;" alt="Image">
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <a class="carousel-control-prev" href="#imageCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#imageCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+        </dl>
+        <h5>Your search parameters:</h5>
+        <div class="row">
+            <div class="col-2">
+                <strong>@Html.DisplayNameFor(model => model.DestinationName)</strong> <br />
+                @Html.DisplayFor(model => model.DestinationName)
+            </div>
+            <div class="col-2">
+                <strong>
+                    @Html.DisplayNameFor(model => model.CheckInDate)
+                </strong><br />
+                @Html.DisplayFor(model => model.CheckInDate)
+            </div>
+            <div class="col-2">
+                <strong> @Html.DisplayNameFor(model => model.CheckOutDate)</strong><br />
+                @Html.DisplayFor(model => model.CheckOutDate)
+            </div>
+            <div class="col-2">
+                <strong>@Html.DisplayNameFor(model => model.NumberOfNights)</strong><br />
+                @Html.DisplayFor(model => model.NumberOfNights)
+            </div>
+            <div class="col-2">
+                <strong>@Html.DisplayNameFor(model => model.NumberOfRooms)</strong><br />
+                @Html.DisplayFor(model => model.NumberOfRooms)
+            </div>
+            <div class="col-2">
+                <strong>@Html.DisplayNameFor(model => model.NumberOfGuests)</strong><br />
+                @Html.DisplayFor(model => model.NumberOfGuests)
+            </div>
+            <div style="margin-top: 2%; margin-left: 2%;">
+                <h4>Rooms</h4>
+                <ul>
+                    @foreach (var roomInfo in Model.RoomInfos)
+                    {
+                        <li>
+                            <strong>Room Type:</strong> @roomInfo.RoomType <br />
+                            <strong>Capacity Of Guests:</strong> @roomInfo.CapacityOfGuests <br />
+                            <strong>Price:</strong> @roomInfo.Price <br />
+                            <strong>Number Of Single Beds:</strong> @roomInfo.NumberOfSingleBeds <br />
+                            <strong>Number Of Double Beds:</strong> @roomInfo.NumberOfDoubleBeds <br />
+                            @if (roomInfo.Amenities.Count() > 0)
+                            {
+                                <h5>Amenities</h5>
+                            }
+                            <ul>
+                                @foreach (var amenity in roomInfo.Amenities)
+                                {
+                                    <li>
+                                        <strong>Amenity:</strong> @amenity.Amenity
+                                    </li>
+                                }
+                            </ul>
+                            <form method="post" action="/Bookings/Reserve">
+                                <input type="hidden" name="CheckInDate" value="@Model.CheckInDate" />
+                                <input type="hidden" name="CheckOutDate" value="@Model.CheckOutDate" />
+                                <input type="hidden" name="IdListing" value="@Model.IdListing" />
+                                <input type="hidden" name="NumberOfGuests" value="@Model.NumberOfGuests" />
+                                <input type="hidden" name="IdRoom" value="@roomInfo.IdRoom" />
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </form>
+                            <hr style="margin-left: -2%;" />
+                        </li>
+
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mainImageModal" tabindex="-1" aria-labelledby="mainImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-a">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="@Model.MainImage" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="" class="img-fluid" id="modalImage" style="display: block; margin: auto; max-width: 100%; max-height: 100%; " />
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize the Bootstrap carousel
+        $(document).ready(function () {
+            $('#imageCarousel').carousel();
+        });
+        $('.thumbnail').click(function () {
+            var imageUrl = $(this).attr('src');
+            $('#modalImage').attr('src', imageUrl);
+            $('#imageModal').modal('show');
+        });
+        $('.main-image').click(function () {
+            var imageUrl = $(this).attr('src');
+            $('#modalImage').attr('src', imageUrl);
+            $('#imageModal').modal('show');
+        });
+    </script>
+}
+
+

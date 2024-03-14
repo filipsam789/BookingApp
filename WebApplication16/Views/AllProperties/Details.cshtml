@@ -1,0 +1,59 @@
+﻿@model WebApplication16.Models.Property
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Destination")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destination.CityName), 
+            @Html.DisplayFor(model => model.Destination.CountryName)
+        </dd>
+
+        <dt>
+            @Html.Label("Property Owner Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyOwner.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfStars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfStars)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

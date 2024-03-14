@@ -1,0 +1,94 @@
+﻿@model WebApplication16.Models.Room
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Listing.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Listing.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CapacityOfGuests)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CapacityOfGuests)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfSingleBeds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfSingleBeds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfDoubleBeds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfDoubleBeds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomNumber)
+        </dd>
+
+    </dl>
+    @if (Model.Amenities.Count() > 0)
+    {
+        <h5>Amenities</h5>
+    }
+    <ul>
+        @foreach (var amenity in Model.Amenities)
+        {
+            <li>
+                <strong>Amenity:</strong> @amenity.Amenity
+            </li>
+        }
+    </ul>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

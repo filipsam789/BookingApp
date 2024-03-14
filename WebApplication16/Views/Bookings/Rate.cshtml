@@ -1,0 +1,17 @@
+﻿@model WebApplication16.Models.RateBooking
+@{
+    ViewBag.Title = "Rate Booking";
+}
+
+<h3>Rate booking from listing @Model.Booking.Listing.Name</h3>
+
+@using (Html.BeginForm("RateBooking", "Bookings"))
+{
+    <div class="form-group">
+        @Html.EditorFor(m => m.Rating, new { @class = "form-control" })
+        @Html.HiddenFor(m => m.IdBooking)
+    </div>
+    <div>
+        <button type="submit" class="btn btn-default">Rate!</button>
+    </div>
+}

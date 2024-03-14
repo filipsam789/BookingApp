@@ -1,0 +1,88 @@
+﻿@model IEnumerable<WebApplication16.Models.ListingListInfoViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+@if (Model.Count() != 0)
+{
+<h5>Your search parameters:</h5>
+<div class="row">
+    <div class="col-2">
+        <strong>@Html.DisplayNameFor(model => model.DestinationName)</strong> <br />
+        @Html.DisplayFor(model => model.First().DestinationName)
+    </div>
+    <div class="col-2">
+        <strong>
+            @Html.DisplayNameFor(model => model.CheckIn)
+        </strong><br />
+        @Html.DisplayFor(model => model.First().CheckIn)
+    </div>
+    <div class="col-2">
+        <strong> @Html.DisplayNameFor(model => model.CheckOut)</strong><br />
+        @Html.DisplayFor(model => model.First().CheckOut)
+    </div>
+    <div class="col-2">
+        <strong>@Html.DisplayNameFor(model => model.NumberOfNights)</strong><br />
+        @Html.DisplayFor(model => model.First().NumberOfNights)
+    </div>
+    <div class="col-2">
+        <strong>@Html.DisplayNameFor(model => model.NumberOfRooms)</strong><br />
+        @Html.DisplayFor(model => model.First().NumberOfRooms)
+    </div>
+    <div class="col-2">
+        <strong>@Html.DisplayNameFor(model => model.NumberOfGuests)</strong><br />
+        @Html.DisplayFor(model => model.First().NumberOfGuests)
+    </div>
+</div>
+}
+<div class="container mt-3">
+    @if (Model.Count() == 0)
+    {
+        <h5 style="color: #db0000">Unfortunately, no rooms are available for your preferences</h5>
+    }
+    @foreach (var item in Model)
+    {
+        <div class="row mb-3" style="border: 2px solid lightgray; border-radius: 10px;">
+            <div class="col-md-4">
+                <a href="/Listings/Info?destinationName=@item.DestinationName&checkInDate=@item.CheckIn&checkOutDate=@item.CheckOut&numberOfGuests=@item.NumberOfGuests&numberOfRooms=@item.NumberOfRooms&selectedIdListing=@item.IdListing" class="text-decoration-none">
+                    <img src="@item.MainImage" class="img-fluid" style="max-width: 100%; border-radius:10px;" alt="@item.Name">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/Listings/Info?destinationName=@item.DestinationName&checkInDate=@item.CheckIn&checkOutDate=@item.CheckOut&numberOfGuests=@item.NumberOfGuests&numberOfRooms=@item.NumberOfRooms&selectedIdListing=@item.IdListing" class="text-decoration-none">
+                    <h5 class="mt-2">@Html.DisplayFor(modelItem => item.Name)</h5>
+                </a>
+                <div class="row">
+                    <span style=" fill:gold;" class="d-flex">
+                        @for (var i = 0; i < item.StarRating; i++)
+                        {
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <path d="M23.555 8.729a1.505 1.505 0 0 0-1.406-.98h-6.087a.5.5 0 0 1-.472-.334l-2.185-6.193a1.5 1.5 0 0 0-2.81 0l-.005.016-2.18 6.177a.5.5 0 0 1-.471.334H1.85A1.5 1.5 0 0 0 .887 10.4l5.184 4.3a.5.5 0 0 1 .155.543l-2.178 6.531a1.5 1.5 0 0 0 2.31 1.684l5.346-3.92a.5.5 0 0 1 .591 0l5.344 3.919a1.5 1.5 0 0 0 2.312-1.683l-2.178-6.535a.5.5 0 0 1 .155-.543l5.194-4.306a1.5 1.5 0 0 0 .433-1.661z">
+                                </path>
+                            </svg>
+                        }
+                    </span>
+                </div>
+                <p>@Html.DisplayFor(modelItem => item.StarRating) Stars</p>
+                <p style="margin-top: 30%;color: #41464b;">@Html.DisplayFor(modelItem => item.City), @Html.DisplayFor(modelItem => item.Country)</p>
+                @if (item.RoomCount < 5)
+                {
+                    <p style="color: #dd0000; margin-top: -2%;">Only @item.RoomCount rooms available at our site.</p>
+                }
+                else
+                {
+                    <p style="color: forestgreen; margin-top: -2%;">You're in luck! @item.RoomCount rooms available at our site.</p>
+                }
+
+            </div>
+            <div class="col-md-4">
+                <p style="text-align:right; margin-right:2%; margin-top:3%; font-weight:bold;">Average rating: @item.AverageRating</p>
+                <p style="text-align:right; margin-right:2%; margin-top:27%; color: gray;">@item.NumberOfNights nights, @item.NumberOfGuests persons</p>
+                <h6 style="text-align:right; margin-right:2%; margin-top:2%;">MKD @item.ListingPrice</h6>
+                <a style="margin-left:66%; margin-top:2%;" href="/Listings/Info?destinationName=@item.DestinationName&checkInDate=@item.CheckIn&checkOutDate=@item.CheckOut&numberOfGuests=@item.NumberOfGuests&numberOfRooms=@item.NumberOfRooms&selectedIdListing=@item.IdListing" class="btn btn-primary">See availability</a>
+            </div>
+        </div>
+
+    }
+</div>

@@ -1,0 +1,88 @@
+﻿@model IEnumerable<WebApplication16.Models.Property>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My properties</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Add new room for one of your properties", "Create", "Rooms")
+</p>
+
+<table id="myproperties" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Destination)
+            </th>
+            <th>
+                @Html.Label("Owner Email")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfStars)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th><strong>Actions</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destination.CityName),
+                    @Html.DisplayFor(modelItem => item.Destination.CountryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PropertyOwner.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfStars)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    <button data-property-id="@item.Id" class="btn btn-danger js-delete">Delete</button> |
+                    @Html.ActionLink("Add new phone number", "AddNewPhoneNumber", new { id = item.Id }) |
+                    @Html.ActionLink("Add new facility", "AddNewFacility", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts {
+    <script>
+            $(document).ready(function () {
+                var table = $("#myproperties").DataTable();
+                $(".js-delete").on("click", function () {
+                    var button = $(this);
+                    bootbox.confirm("Do you want to delete this property?", function (result) {
+                        if (result) {
+                            $.ajax({
+                                url: "/AllProperties/Delete/" + button.attr("data-property-id"),
+                                method: "GET",
+                                success: function () {
+                                    table.row(button.parents("tr")).remove().draw();
+                                }
+                            });
+                        }
+                    });
+                });
+            });
+    </script>
+}

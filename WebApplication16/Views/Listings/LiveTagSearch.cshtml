@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebApplication16.Models.Destination>
+
+@{
+    ViewBag.Title = "LiveTagSearch";
+}
+<style>
+    .search-tag-detail {
+        display: flex;
+        flex-direction: row;
+        padding: 3px;
+        background-color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 21%;
+        height: 100%;
+    }
+
+    .search-tag {
+        display: flex;
+        margin: 2px 2px 2px 0px;
+    }
+
+    .tag-results {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-top: -0.1%;
+    }
+</style>
+<div id="result" class="tag-results col-12">
+    @foreach (var item in Model)
+    {
+        <div class="search-tag" id="@item.Id">
+            <div class="search-tag-detail">
+                @item.CityName, @item.CountryName
+                <span class="search-tag-close">
+                    <i class="fa fa-times "></i>
+                </span>
+            </div>
+        </div>
+    }
+</div>
