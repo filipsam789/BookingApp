@@ -1,52 +1,17 @@
-﻿@model WebApplication16.Models.Listing
-
+﻿@model WebApplication16.Models.AddNewImageViewModel
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Add New Image";
 }
 
-<h2>Create</h2>
+<h3>Add new image url for listing</h3>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("InsertNewImage", "Listings"))
 {
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Listing</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model=>model.IdPropertyOwner)
-        <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.MainImageUrl, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.MainImageUrl, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MainImageUrl, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+    <div class="form-group">
+        @Html.EditorFor(m => m.Image, new { @class = "form-control" })
+        @Html.HiddenFor(m => m.IdListing)
+    </div>
+    <div>
+        <button type="submit" class="btn btn-default">Add image</button>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

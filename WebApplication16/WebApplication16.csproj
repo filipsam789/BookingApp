@@ -236,35 +236,36 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AddNewAmenity.cs" />
-    <Compile Include="Models\AddNewFacilityViewModel.cs" />
-    <Compile Include="Models\AddNewPhoneViewModel.cs" />
-    <Compile Include="Models\Administrator.cs" />
+    <Compile Include="Models\ViewModels\AccountViewModels.cs" />
+    <Compile Include="Models\ViewModels\AddNewAmenityViewModel.cs" />
+    <Compile Include="Models\ViewModels\AddNewFacilityViewModel.cs" />
+    <Compile Include="Models\ViewModels\AddNewImageViewModel.cs" />
+    <Compile Include="Models\ViewModels\AddNewPhoneViewModel.cs" />
+    <Compile Include="Models\Domain\Administrator.cs" />
     <Compile Include="Models\ApplicationSignInManager.cs" />
-    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\Domain\Booking.cs" />
     <Compile Include="Models\BookingEntities.cs" />
     <Compile Include="Models\ApplicationUserManager.cs" />
-    <Compile Include="Models\BookingInfo.cs" />
-    <Compile Include="Models\BookingInfoViewModel.cs" />
+    <Compile Include="Models\Domain\BookingInfo.cs" />
+    <Compile Include="Models\ViewModels\BookingInfoViewModel.cs" />
     <Compile Include="Models\CustomUserStore.cs" />
-    <Compile Include="Models\Destination.cs" />
-    <Compile Include="Models\Listing.cs" />
-    <Compile Include="Models\ListingImage.cs" />
-    <Compile Include="Models\ListingInfo.cs" />
-    <Compile Include="Models\ListingInfoViewModel.cs" />
-    <Compile Include="Models\ListingListInfoViewModel.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Property.cs" />
-    <Compile Include="Models\PropertyFacility.cs" />
-    <Compile Include="Models\PropertyOwner.cs" />
-    <Compile Include="Models\PropertyPhoneNumber.cs" />
-    <Compile Include="Models\RateBooking.cs" />
-    <Compile Include="Models\Room.cs" />
-    <Compile Include="Models\RoomAmenity.cs" />
-    <Compile Include="Models\RoomInfo.cs" />
-    <Compile Include="Models\Traveller.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Domain\Destination.cs" />
+    <Compile Include="Models\Domain\Listing.cs" />
+    <Compile Include="Models\Domain\ListingImage.cs" />
+    <Compile Include="Models\Domain\ListingInfo.cs" />
+    <Compile Include="Models\ViewModels\ListingInfoViewModel.cs" />
+    <Compile Include="Models\ViewModels\ListingListInfoViewModel.cs" />
+    <Compile Include="Models\ViewModels\ManageViewModels.cs" />
+    <Compile Include="Models\Domain\Property.cs" />
+    <Compile Include="Models\Domain\PropertyFacility.cs" />
+    <Compile Include="Models\Domain\PropertyOwner.cs" />
+    <Compile Include="Models\Domain\PropertyPhoneNumber.cs" />
+    <Compile Include="Models\Domain\RateBooking.cs" />
+    <Compile Include="Models\Domain\Room.cs" />
+    <Compile Include="Models\Domain\RoomAmenity.cs" />
+    <Compile Include="Models\Domain\RoomInfo.cs" />
+    <Compile Include="Models\Domain\Traveller.cs" />
+    <Compile Include="Models\Domain\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -615,6 +616,7 @@
     <Content Include="Views\Bookings\Index.cshtml" />
     <Content Include="Views\Rooms\AddNewAmenity.cshtml" />
     <Content Include="Views\Bookings\Rate.cshtml" />
+    <Content Include="Views\Listings\AddNewImage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

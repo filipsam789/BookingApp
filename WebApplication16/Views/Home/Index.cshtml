@@ -1,15 +1,48 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<style>
+    .img-container {
+        position: relative;
+        margin-top: -1.2%;
+    }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">Booking Application</h1>
-        <p class="lead">
-            Wanderlust days <br />
-            and cozy nights <br />
-            Choose from cabins, houses, and more
-        </p>
-        <p><a href="/Listings/Search" class="btn btn-primary btn-md">Begin your search &raquo;</a></p>
-    </section>
-</main>
+    .c9e1121963 {
+        width: 100%;
+        max-height: 600px;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .main {
+        position: absolute;
+        top: 4%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        width: 95%;
+        max-width: 1150px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+</style>
+<div class="img-container">
+    <img class="c9e1121963" alt="It's nighttime. The sky is clear and full of stars, and there are hills in the background. On the right, a modern-looking house stands alone.
+     Warm light coming through the house's glass walls illuminates some of the surrounding terrain, revealing sandy ground, boulders, and a few trees."
+         src="https://q-xx.bstatic.com/xdata/images/xphoto/2880x868/296661902.jpeg?k=81d5ab638f6a52308efde9aff4e7f4d468ee89a8db0677723edf0ff76410d6ec&amp;o="
+         data-testid="herobanner-image">
+    <main class="main">
+        <section class="row" aria-labelledby="aspnetTitle">
+            <h1 id="title">Booking Application</h1>
+            <p class="lead">
+                Wanderlust days <br />
+                and cozy nights <br />
+                Choose from cabins, houses, and more
+            </p>
+            <p><a href="/Listings/Search" class="btn btn-primary btn-md">Begin your search &raquo;</a></p>
+        </section>
+    </main>
+</div>

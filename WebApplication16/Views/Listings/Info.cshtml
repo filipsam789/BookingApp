@@ -11,7 +11,7 @@
             <div class="col-auto">
                 <h3>@Model.ListingName</h3>
                 <p>@Model.Address</p>
-                
+
             </div>
             <div class="col-auto" style="margin-top: 0.6%; margin-left: -4.2%;">
                 <span style=" fill:gold;" class="d-flex">
@@ -23,9 +23,21 @@
                         </svg>
                     }
                 </span>
-                
+
             </div>
-            <span style="text-align:right; margin-top: -6%;">Average rating for this listing is <strong>@Model.AverageRating</strong></span>
+            <span style="text-align:right; margin-top: -6%;">
+
+                <strong>
+                    @if (@Model.AverageRating == null)
+                    {
+                        @:No ratings yet
+                    }
+                    else
+                    {
+                        @:Average rating for this listing is @Model.AverageRating
+                    }
+                </strong>
+            </span>
         </div>
         <img src="@Model.MainImage" class="img-fluid main-image" data-bs-toggle="modal" style="max-width: 80%; max-height: 40%;" />
         <div id="imageCarousel" class="carousel slide mt-3" data-bs-ride="carousel" style="max-height: 180px; margin-top: -2%;">

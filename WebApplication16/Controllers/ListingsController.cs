@@ -7,7 +7,9 @@ using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
+using System.Security.Policy;
 using System.Web;
+using System.Web.ModelBinding;
 using System.Web.Mvc;
 using System.Web.WebPages;
 using WebApplication16.Models;
@@ -45,7 +47,44 @@ namespace WebApplication16.Controllers
             var loginUrl = Url.Action("Login", "Account", new { returnUrl });
             return Redirect(loginUrl);
         }
-        // GET: Listings/My
+        // GET: Listings/AddNewImage
+        public ActionResult AddNewImage(int? id)
+        {
+            var user = db.Users.Find(User.Identity.GetUserId());
+            if (user != null && user is PropertyOwner)
+            {
+                if (id == null)
+                {
+                    return HttpNotFound();
+                }
+                var viewModel = new AddNewImageViewModel { IdListing = (int)id };
+                if (db.Listings.Find(id) == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(viewModel);
+            }
+            var returnUrl = Url.Action("AddNewImage", "Listings");
+            var loginUrl = Url.Action("Login", "Account", new { returnUrl });
+            return Redirect(loginUrl);
+        }
+        // POST: Listings/InsertNewImage
+        [HttpPost]
+        public ActionResult InsertNewImage(AddNewImageViewModel addNewImageViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var listing = db.Listings.Find(addNewImageViewModel.IdListing);
+
+                var listingImage = new ListingImage { IdListing = (int)listing.Id, ImagePath = addNewImageViewModel.Image, Listing = listing };
+                listing.Images.Add(listingImage);
+                db.SaveChanges();
+                return RedirectToAction("My");
+            }
+            return RedirectToAction("AddNewImage", new { id = addNewImageViewModel.IdListing });
+
+        }
+        // GET: Listings/Search
         public ActionResult Search()
         {
             // var destinations = db.Destinations.ToList();

@@ -8,7 +8,9 @@ using System.Text;
 
 namespace WebApplication16.Models
 {
-    internal class AddNewImageViewModel
+    public class AddNewImageViewModel
     {
+        public string Image { get; set; }
+        public int IdListing { get; set; }
     }
 }

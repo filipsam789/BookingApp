@@ -1,7 +1,72 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\views\\listings\\lookup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\views\\listings\\lookup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\views\\listings\\info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\views\\listings\\info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\controllers\\allpropertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\controllers\\allpropertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\views\\listings\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\views\\listings\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\views\\listings\\addnewimage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\views\\listings\\addnewimage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\models\\viewmodels\\addnewimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\models\\viewmodels\\addnewimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\controllers\\listingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\controllers\\listingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\app_start\\customfilters\\addviewbagdataattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\app_start\\customfilters\\addviewbagdataattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|d:\\filip\\finki\\2022_23\\it\\webapplication16\\bookingapp\\webapplication16\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7947425-B14D-4C33-8857-BDF90AD0AD3E}|WebApplication16\\WebApplication16.csproj|solutionrelative:webapplication16\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +74,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Info.cshtml",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Listings\\Info.cshtml",
+              "RelativeDocumentMoniker": "WebApplication16\\Views\\Listings\\Info.cshtml",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Listings\\Info.cshtml",
+              "RelativeToolTip": "WebApplication16\\Views\\Listings\\Info.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T20:08:15.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Lookup.cshtml",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Listings\\Lookup.cshtml",
+              "RelativeDocumentMoniker": "WebApplication16\\Views\\Listings\\Lookup.cshtml",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Listings\\Lookup.cshtml",
+              "RelativeToolTip": "WebApplication16\\Views\\Listings\\Lookup.cshtml",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAAAFgAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T20:08:01.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AllPropertiesController.cs",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Controllers\\AllPropertiesController.cs",
+              "RelativeDocumentMoniker": "WebApplication16\\Controllers\\AllPropertiesController.cs",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Controllers\\AllPropertiesController.cs",
+              "RelativeToolTip": "WebApplication16\\Controllers\\AllPropertiesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T19:47:44.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication16\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication16\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAmwDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T19:46:26.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Listings\\Search.cshtml",
+              "RelativeDocumentMoniker": "WebApplication16\\Views\\Listings\\Search.cshtml",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Listings\\Search.cshtml",
+              "RelativeToolTip": "WebApplication16\\Views\\Listings\\Search.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAEoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T19:38:28.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ListingsController.cs",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Controllers\\ListingsController.cs",
+              "RelativeDocumentMoniker": "WebApplication16\\Controllers\\ListingsController.cs",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Controllers\\ListingsController.cs",
+              "RelativeToolTip": "WebApplication16\\Controllers\\ListingsController.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAswFUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T19:11:16.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddNewImageViewModel.cs",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Models\\ViewModels\\AddNewImageViewModel.cs",
+              "RelativeDocumentMoniker": "WebApplication16\\Models\\ViewModels\\AddNewImageViewModel.cs",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Models\\ViewModels\\AddNewImageViewModel.cs",
+              "RelativeToolTip": "WebApplication16\\Models\\ViewModels\\AddNewImageViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T19:10:34.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddNewImage.cshtml",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Listings\\AddNewImage.cshtml",
+              "RelativeDocumentMoniker": "WebApplication16\\Views\\Listings\\AddNewImage.cshtml",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Listings\\AddNewImage.cshtml",
+              "RelativeToolTip": "WebApplication16\\Views\\Listings\\AddNewImage.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T19:10:02.963Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -18,6 +187,110 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Web.config",
+              "RelativeDocumentMoniker": "WebApplication16\\Web.config",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Web.config",
+              "RelativeToolTip": "WebApplication16\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-12T18:55:58.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Web.config",
+              "RelativeDocumentMoniker": "WebApplication16\\Views\\Web.config",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Web.config",
+              "RelativeToolTip": "WebApplication16\\Views\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-12T18:55:43.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "WebApplication16\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "WebApplication16\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T18:55:41.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Startup.cs",
+              "RelativeDocumentMoniker": "WebApplication16\\Startup.cs",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Startup.cs",
+              "RelativeToolTip": "WebApplication16\\Startup.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T18:55:26.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Global.asax.cs",
+              "RelativeDocumentMoniker": "WebApplication16\\Global.asax.cs",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Global.asax.cs",
+              "RelativeToolTip": "WebApplication16\\Global.asax.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T18:55:16.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddViewBagDataAttribute.cs",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\App_Start\\CustomFilters\\AddViewBagDataAttribute.cs",
+              "RelativeDocumentMoniker": "WebApplication16\\App_Start\\CustomFilters\\AddViewBagDataAttribute.cs",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\App_Start\\CustomFilters\\AddViewBagDataAttribute.cs",
+              "RelativeToolTip": "WebApplication16\\App_Start\\CustomFilters\\AddViewBagDataAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T18:53:19.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FilterConfig.cs",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\App_Start\\FilterConfig.cs",
+              "RelativeDocumentMoniker": "WebApplication16\\App_Start\\FilterConfig.cs",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\App_Start\\FilterConfig.cs",
+              "RelativeToolTip": "WebApplication16\\App_Start\\FilterConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T18:52:17.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication16\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Filip\\FINKI\\2022_23\\IT\\WebApplication16\\BookingApp\\WebApplication16\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication16\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAqwCUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T18:38:40.969Z",
+              "EditorCaption": ""
             }
           ]
         },

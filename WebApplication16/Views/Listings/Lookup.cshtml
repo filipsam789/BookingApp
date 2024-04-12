@@ -77,7 +77,16 @@
 
             </div>
             <div class="col-md-4">
-                <p style="text-align:right; margin-right:2%; margin-top:3%; font-weight:bold;">Average rating: @item.AverageRating</p>
+                <p style="text-align:right; margin-right:2%; margin-top:3%; font-weight:bold;">
+                    @if (item.AverageRating == null)
+                    {
+                        @:No ratings yet
+                    }
+                    else
+                    {
+                        @:Average rating: @item.AverageRating
+                    }
+                </p>
                 <p style="text-align:right; margin-right:2%; margin-top:27%; color: gray;">@item.NumberOfNights nights, @item.NumberOfGuests persons</p>
                 <h6 style="text-align:right; margin-right:2%; margin-top:2%;">MKD @item.ListingPrice</h6>
                 <a style="margin-left:66%; margin-top:2%;" href="/Listings/Info?destinationName=@item.DestinationName&checkInDate=@item.CheckIn&checkOutDate=@item.CheckOut&numberOfGuests=@item.NumberOfGuests&numberOfRooms=@item.NumberOfRooms&selectedIdListing=@item.IdListing" class="btn btn-primary">See availability</a>
