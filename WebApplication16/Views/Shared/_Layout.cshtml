@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary">
         <div class="container">
             @Html.ActionLink("Booking", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
@@ -18,15 +18,25 @@
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Search Bookings", "Search", "Listings", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("My Bookings", "Index", "Bookings", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("My Listings", "My", "Listings", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("My Properties", "MyProperties", "AllProperties", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("My Rooms", "My", "Rooms", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Destinations", "Index", "Destinations", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Listings", "Index", "Listings", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Properties", "Index", "AllProperties", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Rooms", "Index", "Rooms", new { area = "" }, new { @class = "nav-link" })</li>
+                    @if (ViewBag.LoggedInUser != null && ViewBag.LoggedInUser is WebApplication16.Models.Traveller)
+                    {
+                        <li>@Html.ActionLink("Search Bookings", "Search", "Listings", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("My Bookings", "Index", "Bookings", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+                    @if (ViewBag.LoggedInUser != null && ViewBag.LoggedInUser is WebApplication16.Models.PropertyOwner)
+                    {
+                        <li>@Html.ActionLink("My Listings", "My", "Listings", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("My Properties", "MyProperties", "AllProperties", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("My Rooms", "My", "Rooms", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+                    @if (ViewBag.LoggedInUser != null && ViewBag.LoggedInUser is WebApplication16.Models.Administrator)
+                    {
+                        <li>@Html.ActionLink("Destinations", "Index", "Destinations", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Listings", "Index", "Listings", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Properties", "Index", "AllProperties", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Rooms", "Index", "Rooms", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>

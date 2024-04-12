@@ -7,6 +7,7 @@ namespace WebApplication16
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new AddViewBagDataAttribute(new Models.BookingEntities()));
             filters.Add(new HandleErrorAttribute());
         }
     }

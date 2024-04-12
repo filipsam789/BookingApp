@@ -21,7 +21,6 @@ namespace WebApplication16.Controllers
             var user = db.Users.Find(User.Identity.GetUserId());
             if (user != null && user is Traveller)
             {
-               // var bookings = db.Bookings.Include(b => b.Listing).Include(b => b.Traveller).Where(b=>b.IdTraveller == user.Id);
                 var sqlQuery = "select *\r\n" +
                     "from booking_info\r\n" +
                     "where booking_info.idUser = @TravellerId";
@@ -88,34 +87,7 @@ namespace WebApplication16.Controllers
             var loginUrl = Url.Action("Login", "Account", new { returnUrl });
             return Redirect(loginUrl);
         }
-/*
-        // GET: Bookings/Create
-        public ActionResult Create()
-        {
-            ViewBag.IdListing = new SelectList(db.Listings, "Id", "Name");
-            ViewBag.IdTraveller = new SelectList(db.Users, "Id", "Name");
-            return View();
-        }
 
-        // POST: Bookings/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Rating,DiscountPercent,CheckInDate,CheckOutDate,IdTraveller,IdListing,NumberOfGuests")] Booking booking)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Bookings.Add(booking);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            ViewBag.IdListing = new SelectList(db.Listings, "Id", "Name", booking.IdListing);
-            ViewBag.IdTraveller = new SelectList(db.Users, "Id", "Name", booking.IdTraveller);
-            return View(booking);
-        } 
-*/
         // POST: Bookings/Reserve
         [HttpPost]
         public ActionResult Reserve(DateTime CheckInDate, DateTime CheckOutDate, int IdListing, int NumberOfGuests, int IdRoom)
@@ -138,78 +110,7 @@ namespace WebApplication16.Controllers
             var loginUrl = Url.Action("Login", "Account", new { returnUrl });
             return Redirect(loginUrl);
         }
-        /*
-                // GET: Bookings/Edit/5
-                public ActionResult Edit(int? id)
-                {
-                    var user = db.Users.Find(User.Identity.GetUserId());
-                    if (user != null && user is Traveller)
-                    {
-                        if (id == null)
-                        {
-                            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                        }
-                        Booking booking = db.Bookings.Find(id);
-                        if (booking == null)
-                        {
-                            return HttpNotFound();
-                        }
-                        ViewBag.IdListing = new SelectList(db.Listings, "Id", "Name", booking.IdListing);
-                        ViewBag.IdTraveller = new SelectList(db.Users, "Id", "Name", booking.IdTraveller);
-                        return View(booking);
-                    }
-                    return RedirectToAction("Login", "Account");
-                }
 
-                // POST: Bookings/Edit/5
-                // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-                // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-                [HttpPost]
-                [ValidateAntiForgeryToken]
-                public ActionResult Edit([Bind(Include = "Id,Rating,DiscountPercent,CheckInDate,CheckOutDate,IdTraveller,IdListing,NumberOfGuests")] Booking booking)
-                {
-                    var user = db.Users.Find(User.Identity.GetUserId());
-                    if (user != null && user is Traveller)
-                    {
-                        if (ModelState.IsValid)
-                        {
-                            db.Entry(booking).State = EntityState.Modified;
-                            db.SaveChanges();
-                            return RedirectToAction("Index");
-                        }
-                        ViewBag.IdListing = new SelectList(db.Listings, "Id", "Name", booking.IdListing);
-                        ViewBag.IdTraveller = new SelectList(db.Users, "Id", "Name", booking.IdTraveller);
-                        return View(booking);
-                    }
-                    return RedirectToAction("Login", "Account");
-                }
-
-                // GET: Bookings/Delete/5
-                public ActionResult Delete(int? id)
-                {
-                    var user = db.Users.Find(User.Identity.GetUserId());
-                    if (user != null && user is Traveller)
-                    {
-                        if (id == null)
-                        {
-                            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                        }
-                        Booking booking = db.Bookings.Find(id);
-                        if (booking == null)
-                        {
-                            return HttpNotFound();
-                        }
-                        return View(booking);
-                    }
-                    var returnUrl = Url.Action("Delete", "Bookings");
-                    var loginUrl = Url.Action("Login", "Account", new { returnUrl });
-                    return Redirect(loginUrl);
-                }
-
-                // POST: Bookings/Delete/5
-                [HttpPost, ActionName("Delete")]
-                [ValidateAntiForgeryToken]
-        */
         // GET: Bookings/Rate
         public ActionResult Rate(int? id)
         {

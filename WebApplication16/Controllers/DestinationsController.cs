@@ -117,33 +117,7 @@ namespace WebApplication16.Controllers
             }
             return View(destination);
         }
-/*
-        // GET: Destinations/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            var user = db.Users.Find(User.Identity.GetUserId());
-            if (user != null && user is Administrator)
-            {
-                if (id == null)
-                {
-                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                }
-                Destination destination = db.Destinations.Find(id);
-                if (destination == null)
-                {
-                    return HttpNotFound();
-                }
-                return View(destination);
-            }
-            var returnUrl = Url.Action("Delete", "Destinations");
-            var loginUrl = Url.Action("Login", "Account", new { returnUrl });
-            return Redirect(loginUrl);
-        }
 
-        // POST: Destinations/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-*/
         public ActionResult Delete(int id)
         {
             Destination destination = db.Destinations.Find(id);

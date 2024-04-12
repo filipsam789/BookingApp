@@ -37,17 +37,8 @@ namespace WebApplication16.Models
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(ApplicationUserManager manager)
         {
-            // Note: This example assumes that you have a UserManager with the name ApplicationUserManager
-
-            // Create a claims identity
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
-
-            // Add custom claims based on your user properties
-            //userIdentity.AddClaim(new Claim("FullName", $"{FirstName} {LastName}"));
             userIdentity.AddClaim(new Claim("Email", Email));
-
-            // Add additional claims as needed...
-
             return userIdentity;
         }
     }

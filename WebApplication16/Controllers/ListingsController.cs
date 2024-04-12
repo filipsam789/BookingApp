@@ -344,33 +344,7 @@ namespace WebApplication16.Controllers
             ViewBag.IdPropertyOwner = new SelectList(db.Users, "Id", "Name", listing.IdPropertyOwner);
             return View(listing);
         }
-        /*
-        // GET: Listings/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            var user = db.Users.Find(User.Identity.GetUserId());
-            if (user != null &&  !(user is Traveller))
-            {
-                if (id == null)
-                {
-                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                }
-                Listing listing = db.Listings.Find(id);
-                if (listing == null)
-                {
-                    return HttpNotFound();
-                }
-                return View(listing);
-            }
-            var returnUrl = Url.Action("Delete", "Listings");
-            var loginUrl = Url.Action("Login", "Account", new { returnUrl });
-            return Redirect(loginUrl);
-        }
-
-        // POST: Listings/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        */
+        
         public ActionResult Delete(int id)
         {
             Listing listing = db.Listings.Find(id);

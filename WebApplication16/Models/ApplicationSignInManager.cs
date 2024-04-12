@@ -16,18 +16,13 @@ namespace WebApplication16.Models
 
         public override Task<ClaimsIdentity> CreateUserIdentityAsync(User user)
         {
-            // Customize the creation of the user's identity, including claims
             var userIdentity = base.CreateUserIdentityAsync(user);
-
-            // Add custom claims if needed
-            // userIdentity.AddClaim(new Claim("custom_claim_type", "custom_claim_value"));
 
             return userIdentity;
         }
         public static ApplicationSignInManager Create(IdentityFactoryOptions<ApplicationSignInManager> options, IOwinContext context)
         {
             var manager = new ApplicationSignInManager(context.GetUserManager<ApplicationUserManager>(), context.Authentication);
-            // Configure manager settings...
             return manager;
         }
         public virtual async Task<SignInStatus> PasswordSignInAsync(string userName, string password, bool isPersistent, bool shouldLockout)
@@ -42,15 +37,9 @@ namespace WebApplication16.Models
 
             if (user != null && await UserManager.CheckPasswordAsync(user, password).ConfigureAwait(false))
             {
-                // Your custom logic for successful sign-in
-                // ...
-
                 await SignInAsync(user, isPersistent, shouldLockout).ConfigureAwait(false);
-
                 return SignInStatus.Success;
             }
-
-            // Other logic...
 
             return SignInStatus.Failure;
         }

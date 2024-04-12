@@ -222,6 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CustomFilters\AddViewBagDataAttribute.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -254,7 +255,6 @@
     <Compile Include="Models\ListingInfoViewModel.cs" />
     <Compile Include="Models\ListingListInfoViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\MemoryCacheService.cs" />
     <Compile Include="Models\Property.cs" />
     <Compile Include="Models\PropertyFacility.cs" />
     <Compile Include="Models\PropertyOwner.cs" />
@@ -265,8 +265,6 @@
     <Compile Include="Models\RoomInfo.cs" />
     <Compile Include="Models\Traveller.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserLockoutService.cs" />
-    <Compile Include="Models\UserRoleAuthorizationAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

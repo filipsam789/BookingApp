@@ -20,12 +20,9 @@ namespace WebApplication16.Models
 
         public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context)
         {
-            var memoryCacheService = new MemoryCacheService();
 
             var manager = new ApplicationUserManager(new CustomUserStore(new BookingEntities()));
 
-            // Configure validation logic for usernames, passwords, etc.
-            
             manager.UserValidator = new UserValidator<User>(manager)
             {
                 AllowOnlyAlphanumericUserNames = false,
@@ -35,7 +32,7 @@ namespace WebApplication16.Models
             // Configure password policy
             manager.PasswordValidator = new PasswordValidator
             {
-                RequiredLength = 6,
+                RequiredLength = 9,
                 RequireNonLetterOrDigit = false,
                 RequireDigit = false,
                 RequireLowercase = false,

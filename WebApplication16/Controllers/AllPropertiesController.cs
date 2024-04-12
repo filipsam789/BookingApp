@@ -96,7 +96,6 @@ namespace WebApplication16.Controllers
             }
 
             ViewBag.DestinationList = new SelectList(db.Destinations.ToList(), "Id", "CityName");
-            //ViewBag.OwnerList = new SelectList(db.PropertyOwners.ToList(), "Id", "Email");
             return View(property);
 
         }
@@ -107,7 +106,6 @@ namespace WebApplication16.Controllers
             var user = db.Users.Find(User.Identity.GetUserId());
             if (user != null && user is PropertyOwner)
             {
-                //ViewBag.OwnerList = new SelectList(db.PropertyOwners.ToList(), "Id", "Email");
                 if (id == null)
                 {
                     return HttpNotFound();
@@ -136,7 +134,6 @@ namespace WebApplication16.Controllers
                 db.SaveChanges();
                 return RedirectToAction("MyProperties");
             }
-            //ViewBag.OwnerList = new SelectList(db.PropertyOwners.ToList(), "Id", "Email");
             return View(addNewPhoneViewModel);
 
         }
@@ -175,7 +172,6 @@ namespace WebApplication16.Controllers
                 db.SaveChanges();
                 return RedirectToAction("MyProperties");
             }
-            //ViewBag.OwnerList = new SelectList(db.PropertyOwners.ToList(), "Id", "Email");
             return View(addNewFacilityViewModel);
 
         }
@@ -221,33 +217,6 @@ namespace WebApplication16.Controllers
             ViewBag.IdOwner = new SelectList(db.Users, "Id", "Name", property.IdOwner);
             return View(property);
         }
-/*
-        // GET: AllProperties/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            var user = db.Users.Find(User.Identity.GetUserId());
-            if (user != null && user is PropertyOwner)
-            {
-                if (id == null)
-                {
-                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                }
-                Property property = db.Properties.Find(id);
-                if (property == null)
-                {
-                    return HttpNotFound();
-                }
-                return View(property);
-            }
-            var returnUrl = Url.Action("Delete", "AllProperties");
-            var loginUrl = Url.Action("Login", "Account", new { returnUrl });
-            return Redirect(loginUrl);
-        }
-
-        // POST: AllProperties/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-*/
         public ActionResult Delete(int id)
         {
             Property property = db.Properties.Find(id);

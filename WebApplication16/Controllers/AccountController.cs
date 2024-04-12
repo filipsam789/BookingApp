@@ -44,21 +44,7 @@ namespace WebApplication16.Controllers
                 _signInManager = value;
             }
         }
-       /* [HttpPost]
-        public ActionResult AddUserToRole(AddToRoleModel model)
-        {
-            try
-            {
-                var user = UserManager.FindByEmail(model.Email);
-                UserManager.AddToRole(user.Id, model.selectedRole);
-                return RedirectToAction("Index", "Destinations");
-            }
-            catch (Exception exception)
-            {
-                return HttpNotFound();
-            }
-        }
-*/
+
         public ApplicationUserManager UserManager
         {
             get

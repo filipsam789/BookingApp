@@ -182,33 +182,6 @@ namespace WebApplication16.Controllers
             ViewBag.IdProperty = new SelectList(db.Properties, "Id", "Name", room.IdProperty);
             return View(room);
         }
-/*
-        // GET: Rooms/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            var user = db.Users.Find(User.Identity.GetUserId());
-            if (user != null && user is PropertyOwner)
-            {
-                if (id == null)
-                {
-                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                }
-                Room room = db.Rooms.Find(id);
-                if (room == null)
-                {
-                    return HttpNotFound();
-                }
-                return View(room);
-            }
-            var returnUrl = Url.Action("Delete", "Rooms");
-            var loginUrl = Url.Action("Login", "Account", new { returnUrl });
-            return Redirect(loginUrl);
-        }
-
-        // POST: Rooms/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-*/
         public ActionResult Delete(int id)
         {
             Room room = db.Rooms.Find(id);
