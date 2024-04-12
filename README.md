@@ -22,16 +22,19 @@ which is local for now, meaning the project cannot be run upon cloning this repo
 
 Under this text are some screenshots from the web application.
 
-![image](https://github.com/filipsam789/BookingApp/assets/108234260/a9e57026-1031-4bb7-a2a0-54fd34bb0190)
+![image](https://github.com/filipsam789/BookingApp/assets/108234260/7129cb65-7560-498c-95d5-79f000b7839f)
 
-![image](https://github.com/filipsam789/BookingApp/assets/108234260/ef1a595c-ef2b-4ccf-9d06-42a36d0fecfd)
+![image](https://github.com/filipsam789/BookingApp/assets/108234260/4d258883-d1e5-4cea-9d68-c63df1889baa)
 
-![313025168-1f5a2ce9-74ab-46e4-9c63-87f31cd0292a](https://github.com/filipsam789/BookingApp/assets/108234260/68459222-1c19-4660-aa77-e1515f1c2e0d)
+![image](https://github.com/filipsam789/BookingApp/assets/108234260/b5574a01-ddd6-4aa3-b849-5ba54fa7df1c)
 
-![image](https://github.com/filipsam789/BookingApp/assets/108234260/ca17f273-9ef5-4a62-9fab-7006d9e37a7c)
+![image](https://github.com/filipsam789/BookingApp/assets/108234260/e266e341-7138-440e-9093-6d899173ca47)
 
-![image](https://github.com/filipsam789/BookingApp/assets/108234260/727f7d53-0d61-402d-bc07-15bf425e2e2e)
+![image](https://github.com/filipsam789/BookingApp/assets/108234260/919f9658-8d3e-46d3-972f-e465b7b96b32)
 
-![image](https://github.com/filipsam789/BookingApp/assets/108234260/98ee4c49-31e9-4a36-b402-16c56662ecc0)
+![image](https://github.com/filipsam789/BookingApp/assets/108234260/449064ae-7f2c-4380-9f7e-8f4b068d5586)
 
-![image](https://github.com/filipsam789/BookingApp/assets/108234260/d39b75a7-0f16-4045-be69-f1f6cd6419e2)
+![image](https://github.com/filipsam789/BookingApp/assets/108234260/d0ff2d11-6974-4090-acc2-6da4519546be)
+
+![image](https://github.com/filipsam789/BookingApp/assets/108234260/39543091-609b-4578-8048-0f20d2c4e510)
+
